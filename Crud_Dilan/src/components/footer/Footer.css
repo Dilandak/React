@@ -1,10 +1,84 @@
-.footer {
-    background-color: rgb(214, 186, 186); /* O el color que prefieras */
-    color: black;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  }
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media li {
+  list-style: none;
+}
+
+.social-media li a img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Sección principal */
+main {
+  padding: 2rem;
+}
+
+/* Sección Quiénes somos */
+#quienes-somos {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quienes-somos h2 {
+  color: #333;
+}
+
+#quienes-somos p {
+  color: #666;
+}
+

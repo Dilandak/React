@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: theme.zIndex.drawer + 2,
   },
   link: {
     textDecoration: 'none',
     color: 'inherit',
   },
   drawerList: {
-    width: 250,
+    width: 350,
   },
 }));
 
@@ -44,9 +44,9 @@ const Navbar = () => {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          {/* Icono de menú para dispositivos pequeños */}
+          {}
           <IconButton
-            color="inherit"
+            color="black"
             aria-label="open drawer"
             onClick={handleDrawerToggle}
             edge="start"
@@ -56,17 +56,12 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          {/* Título */}
+          {}
           <Typography variant="h6" className={classes.title}>
-            SERVICIO NACIONAL DE APRENDIZAJE - SENA
-          </Typography>
-          {/* Espaciador */}
-          <Box sx={{ flexGrow: 1 }} />
-          {/* Botones de navegación para pantallas grandes */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            {['Home', 'Cursos', 'Usuarios', 'Más Información'].map((text) => (
+            Stay In style.</Typography>{} <Box sx={{ flexGrow: 1 }} />{}<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            {['Inicio', 'IniciarSesion', 'Registro', 'Carrito','Categorias','QuienesSomos','QueEsStayInStyle','AñadirACesta','Comprar'].map((text) => (
               <Button
-                color="inherit"
+                color="white"
                 component={RouterLink}
                 to={`/${normalizeText(text)}`}
                 key={text}
@@ -77,7 +72,7 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      {/* Drawer para dispositivos pequeños */}
+      {}
       <Drawer
         anchor="left"
         open={drawerOpen}
@@ -90,7 +85,7 @@ const Navbar = () => {
           onKeyDown={handleDrawerToggle}
         >
           <List>
-            {['Home', 'Cursos', 'Usuarios', 'Más Información'].map((text) => (
+            {['Inicio', 'IniciarSesion', 'Registro', 'Carrito','Categorias','QuienesSomos','QueEsStayInStyle','Añadir a cesta','Comprar'].map((text) => (
               <ListItem
                 button
                 component={RouterLink}

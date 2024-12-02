@@ -1,51 +1,215 @@
-.content {
-  padding: 64px 20px 60px 20px; /* Ajusta el padding inferior para el footer */
-  margin-bottom: 60px; /* Esto asegura que el contenido no quede oculto por el footer */
+/* Estilos generales */
+body {
+  background-color: #E5E1DA; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
- 
-/*  ESTO SON LOS ESTILOS QUE TEBNIA
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+/* Header */
+header {
+  background-color: #000000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 0;
   text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  color: white; 
+  text-decoration: none;
+  font-size: 40px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Lista de navegación */
+nav {
+  padding: 30px;
+  margin: 0px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 5px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px; 
+  transition: all 0.3s ease-in-out;
+  font-size: 20px; 
+}
+
+nav ul li a:hover {
+  background-color: #605f5f;
+  border-radius: 5px;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 148%;
+  left: 10%;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  background-color: #333; /* Fondo del menú desplegable */
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  padding: 8px 15px; /* Ajusta el padding para hacer el hover más pequeño */
+  font-size: 18px;
+  margin: 5px 0; /* Añade espacio entre las opciones */
+}
+
+/* Carrito */
+.carrito-items {
+  margin-bottom: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.carrito-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.carrito-item-info {
+  flex: 1;
+}
+
+.carrito-item-info h4 {
+  margin: 0;
+}
+
+.carrito-item-info p {
+  margin: 5px 0;
+}
+
+.eliminar-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.eliminar-btn:hover {
+  background-color: #e60000;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+#comprar-btn {
+  background-color: #007bff; /* Color azul */
+  color: white; /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+#comprar-btn:hover {
+  background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#comprar {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#comprar:hover {
+  background-color: #0056b3;
+}
+
+
+/* Media Queries para hacer responsive el diseño */
+
+/* Responsividad para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  .carrito-item {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .carrito-item img {
+      margin-bottom: 10px;
+  }
+
+  .carrito-total {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  footer {
+      text-align: center;
+  }
+
+  .footer-section {
+      margin: 20px 0;
+  }
+
+  .social-media {
+      justify-content: center;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-/*
